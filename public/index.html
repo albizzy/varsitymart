@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <title>Varsity Mart- Online shopping for universities in Tanzania.</title>
+    <link rel="icon" href="assets/icons/varsityMart_Icon.svg" type="image/svg+xml">
+    <!-- Varsity icon on the title bar -->
+</head>
+
+<body>
+
+    <!-- Navigation bar and its components starts here -->
+    <div class="nav-container">
+        <div class="nav-wrapper">
+            <div class="logo-container">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 489.01 296.89"><defs><style>.cls-1{fill:#57be56;}.cls-2{fill:none;stroke:#57be56;stroke-linecap:round;stroke-linejoin:round;stroke-width:25px;}</style></defs><path class="cls-1" d="M784.9,539.5,553,552a12.52,12.52,0,0,1-1.35-25c.45,0,.91,0,1.35,0Z" transform="translate(-295.88 -526.69)"/><path class="cls-1" d="M351.32,552l-55.44-12.5L351.32,527a12.81,12.81,0,1,1,0,25Z" transform="translate(-295.88 -526.69)"/><line class="cls-2" x1="155.52" y1="183.63" x2="60.14" y2="12.82"/><line class="cls-2" x1="331.5" y1="187.66" x2="265.75" y2="74.03"/><path class="cls-1" d="M773.32,726.24,696.86,583.38A12.54,12.54,0,0,1,719,571.55a13.74,13.74,0,0,1,.77,1.77Z" transform="translate(-295.88 -526.69)"/><polyline class="cls-2" points="158.3 183.63 158.64 183.04 243.73 35.98 257.14 12.82"/><line class="cls-2" x1="265.75" y1="74.03" x2="202.33" y2="183.63"/><line class="cls-2" x1="411.46" y1="49.48" x2="331.5" y2="187.66"/><circle class="cls-2" cx="401.8" cy="252.64" r="31.75"/><circle class="cls-2" cx="265.75" cy="252.64" r="31.75"/></svg>
+            </div>
+
+            <div class="nav-link-wrapper">
+                <a href="shop-all.html">Shop All</a>
+                <a href="#">New</a>
+                <a href="#Best-Sellers">Best Sellers</a>
+                <a href="#hot">Hot</a>
+                <a href="#trending">Trending</a>
+            </div>
+
+            <div class="account-wrapper">
+                <button class="btn login-btn">
+                    <img src="assets/icons/user.svg" alt="user-login-avatar">
+                    <span>Login</span>
+                </button>
+                <div class="cart-wrapper">
+                    <img src="assets/icons/bag.svg" alt="shopping-bag">
+                    <span id="cart-counter">0</span>
+                </div>
+            </div>
+
+            <div class="menu-icon">
+                <i class="bx bx-menu-alt-right open-nav"></i>
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+
+    <!-- Landing Page-->
+    <div class="add-phone-nav phone-nav-wrapper">
+        <div class="phone-nav">
+            <div class="phone-nav-header">
+                <i class="bx bx-x close-nav"></i>
+            </div>
+
+            <div class="phone-nav-body">
+                <a href="shop-all.html">Shop All</a>
+                <a href="#">New</a>
+                <a href="#Best-Sellers">Best Sellers</a>
+                <a href="#hot">Hot</a>
+                <a href="#trending">Trending</a>
+            </div>
+
+            <div class="phone-nav-footer">
+                <button class="btn sign-up-btn">Sign Up</button>
+                <button class="btn sign-in-btn">Login</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="container landing-page-container">
+        <div class="item"></div>
+        <div class="item">
+            <h1>varsityMart</h1>
+            <ul>
+                <li>Get 100% discount for new users</li>
+                <li>Advertise with Us</li>
+                <li>Shop with varsity</li>
+            </ul>
+            <button class="btn get-started-btn">Get Started</button>
+        </div>
+    </div>
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyAgn4wkQbHP_Y1_aIhrz8BwKlfIt6NwkzI",
+        authDomain: "varsitymart-8eed0.firebaseapp.com",
+        projectId: "varsitymart-8eed0",
+        storageBucket: "varsitymart-8eed0.appspot.com",
+        messagingSenderId: "975607137309",
+        appId: "1:975607137309:web:ef8e8f7a19f3ddd21932f4",
+        measurementId: "G-TFMWR369HN"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
+
+</html>
+
+<!-- Some styles have been reused in various sections 
+    forexample the image container in best sellers page
+    have been reused in the trending on varsity page 
+    this includes all the items in the best sellers grid items
+
+    check reference in the main.css file
+-->
+
+<!-- ********************************-->
