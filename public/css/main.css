@@ -4,7 +4,7 @@
     --accent-color: #57BE6C;
     --text-color: #101010;
     --text-color-shade: #535353;
-    --landing-page-background: url("../assets/img/landing_background");
+    --accent-color-shadow: #69ce7dd5;
 }
 
 * {
@@ -60,6 +60,24 @@ button {
     transition: 1.2s;
 }
 
+::-moz-scrollbar {
+    width: 5px;
+}
+
+::-moz-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+}
+
+::-moz-scrollbar-thumb {
+    background: #666464;
+    border-radius: 50px;
+}
+
+::-moz-scrollbar-thumb:hover {
+    background: #040403;
+    transition: 1.2s;
+}
+
 .nav-container {
     width: 100%;
     height: 10vh;
@@ -81,19 +99,24 @@ button {
 
 .nav-wrapper .logo-container {
     background: transparent;
-    width: 5%;
+    width: 20%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    font-size: 2em;
+}
+
+.nav-wrapper .logo-container h4 {
+    font-size: .7em;
 }
 
 
 /*Varsity Logo*/
 
 svg {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .nav-wrapper .nav-link-wrapper {
@@ -131,8 +154,8 @@ svg {
 
 .btn {
     width: 6rem;
-    height: 2rem;
-    border-radius: 1rem;
+    height: 2.5rem;
+    border-radius: 1.5rem;
     border: 1px solid var(--text-color);
     background: transparent;
     font-size: 1rem;
@@ -227,28 +250,31 @@ svg {
 }
 
 .landing-page-container>div:nth-child(2) h1 {
-    width: 100%;
+    width: 80%;
     height: 30%;
     background: transparent;
     text-align: center;
-    font-size: 4rem;
+    font-size: 5em;
     font-weight: 700;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     letter-spacing: 3px;
 }
 
 .landing-page-container>div:nth-child(2) ul {
-    width: 60%;
+    width: 80%;
     background: transparent;
     height: 50%;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
 
 .landing-page-container>div:nth-child(2) li {
-    font-size: 1.02rem;
-    line-height: 2.5;
+    font-size: 2em;
     color: var(--text-color-shade);
 }
 
@@ -263,6 +289,169 @@ svg {
     background: var(--accent-color);
     border: none;
     color: var(--text-color);
+    box-shadow: 0px 5px 40px var(--accent-color-shadow);
+}
+
+.discount-page-container {
+    position: relative;
+    max-width: 100%;
+    height: 100vh;
+    background: transparent;
+    top: 90vh;
+}
+
+.discount-page-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem 1rem;
+    grid-template-areas: ". .";
+}
+
+.discount-page-wrapper>div:nth-child(2) {
+    background: url("../assets/icons/discount.svg");
+    background-position: 300px 200px;
+    background-size: 220px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.discount-page-wrapper>div:nth-child(1) {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: space-around;
+}
+
+.discount-page-wrapper>div:nth-child(1) h1 {
+    font-size: 6em;
+    height: 20%;
+    background: transparent;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.discount-page-wrapper>div:nth-child(1) p {
+    width: 100%;
+    height: 40%;
+    font-size: 2em;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    white-space: wrap;
+    line-height: 2.5;
+    color: var(--text-color-shade);
+}
+
+.discount-page-wrapper>div:nth-child(1) .button-container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-btn {
+    width: 9rem;
+    height: 2.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--text-color);
+    background: transparent;
+    font-size: 1rem;
+    outline: none;
+    transition: all .5s ease;
+}
+
+.subscribe-btn:hover {
+    background: var(--accent-color);
+    border: none;
+    color: var(--text-color);
+    box-shadow: 0px 5px 40px var(--accent-color-shadow);
+}
+
+.advertisement-container {
+    position: relative;
+    max-width: 100%;
+    height: 100vh;
+    background: transparent;
+    top: 90vh;
+    padding: 4rem;
+}
+
+.advertisement-page-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem 1rem;
+    grid-auto-flow: row;
+    grid-template-areas: ". .";
+    border-radius: 2rem;
+}
+
+.advertisement-page-wrapper .item {
+    background: transparent;
+}
+
+.advertisement-page-wrapper .item-1 {
+    padding: 2rem;
+}
+
+.advertisement-page-wrapper .item-1 h1 {
+    font-size: 6em;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.advertisement-page-wrapper .item-1 p {
+    width: 100%;
+    height: 60%;
+    font-size: 2em;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    white-space: wrap;
+    line-height: 2.5;
+    color: var(--text-color-shade);
+    background: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.advertisement-page-wrapper .item-1 .button-container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.explore-btn {
+    width: 9rem;
+}
+
+.explore-btn:hover {
+    background: var(--accent-color);
+    border: none;
+    color: var(--text-color);
+    box-shadow: 0px 5px 40px var(--accent-color-shadow);
+}
+
+.advertisement-page-wrapper .item-2 {
+    background: url("../assets/icons/content-marketing.svg");
+    background-position: 300px 200px;
+    background-size: 220px;
+    background-repeat: no-repeat;
 }
 
 
@@ -271,7 +460,7 @@ svg {
 @media only screen and (max-width: 600px) {
     .nav-container {
         width: 100%;
-        height: 7.5vh;
+        height: 8.5vh;
         background: var(--secondary-color);
         position: relative;
         padding: .5rem .5rem;
@@ -281,23 +470,27 @@ svg {
         width: 100%;
         height: 100%;
         background: transparent;
-        padding: .5rem .5rem;
+        padding: .5rem 1rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     .nav-wrapper .logo-container {
         background: transparent;
-        width: 5%;
+        width: 35%;
+        height: 100%;
         height: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+    }
+    .nav-wrapper .logo-container h4 {
+        font-size: .6em;
     }
     /*Varsity Logo*/
     .logo-container svg {
-        width: 3em;
-        height: 3em;
+        width: 35px;
+        height: 35px;
     }
     .nav-wrapper .nav-link-wrapper {
         background: transparent;
@@ -309,6 +502,16 @@ svg {
     }
     .account-wrapper {
         display: none;
+    }
+    .btn {
+        width: 6.5rem;
+        height: 2.5rem;
+        border-radius: 1.5rem;
+        border: 1px solid var(--text-color);
+        background: transparent;
+        font-size: .8rem;
+        outline: none;
+        transition: all .5s ease;
     }
     .menu-icon {
         display: block;
@@ -344,7 +547,7 @@ svg {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        padding: 1rem;
+        padding: .5rem 1.5rem;
         font-size: 2em;
     }
     .phone-nav-body {
@@ -398,14 +601,339 @@ svg {
         grid-template-rows: 1fr 1fr;
         gap: .5rem .5rem;
         grid-template-areas: "."".";
-        padding: 1rem;
+        padding: 2rem;
     }
     .landing-page-container>div {
         background: url("../assets/img/landing_background.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        margin-top: .5rem;
+        margin-top: 1.8rem;
+        border-radius: 2rem;
+    }
+    .landing-page-container>div:nth-child(2) {
+        background: transparent;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .landing-page-container>div:nth-child(2) h1 {
+        width: 100%;
+        height: 20%;
+        background: transparent;
+        text-align: left;
+        font-size: 3.5em;
+        font-weight: 700;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        letter-spacing: 3px;
+        padding-bottom: 1rem;
+    }
+    .landing-page-container>div:nth-child(2) ul {
+        width: 100%;
+        background: transparent;
+        height: 50%;
+        list-style: none;
+        text-align: left;
+        padding-bottom: 1rem;
+    }
+    .landing-page-container>div:nth-child(2) li {
+        font-size: 1.5em;
+        line-height: 2;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: var(--text-color-shade);
+    }
+    .get-started-btn {
+        background: transparent;
+        width: 9rem;
+        height: 2.5rem;
+        border-radius: 1.5rem;
+    }
+    .get-started-btn:hover {
+        background: var(--accent-color);
+        border: none;
+        color: var(--text-color);
+    }
+    .discount-page-container {
+        position: relative;
+        max-width: 100%;
+        height: 70vh;
+        background: transparent;
+        top: 90vh;
+    }
+    .discount-page-wrapper {
+        display: grid;
+        flex-direction: column-reverse;
+        padding: 1rem;
+        background: transparent;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: .5rem .5rem;
+        grid-template-areas: ".";
+        width: 100%;
+        height: 100%;
+    }
+    .discount-page-wrapper>div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    .discount-page-wrapper>div h1 {
+        width: 100%;
+        font-size: 3em;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .discount-page-wrapper>div span {
+        font-size: 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .discount-page-wrapper>div:nth-child(1) {
+        background: url("../assets/icons/discount.svg");
+        background-position: 250px 250px;
+        background-size: 120px;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .discount-page-wrapper>div:nth-child(1) h1 {
+        font-size: 3em;
+        width: 100%;
+        height: 20%;
+        background: transparent;
+        padding-bottom: 1rem;
+    }
+    .discount-page-wrapper>div:nth-child(1) p {
+        width: 100%;
+        height: 50%;
+        font-size: 1.5em;
+        text-align: left;
+        white-space: wrap;
+        line-height: 2;
+        color: var(--text-color-shade);
+    }
+    .subscribe-btn:hover {
+        background: var(--accent-color);
+        border: none;
+        color: var(--text-color);
+        box-shadow: 0px 5px 40px var(--accent-color-shadow);
+    }
+    .advertisement-container {
+        position: relative;
+        max-width: 100%;
+        height: 70vh;
+        background: transparent;
+        top: 90vh;
+        padding: 1rem;
+    }
+    .advertisement-page-wrapper {
+        display: grid;
+        flex-direction: column-reverse;
+        padding: 1rem;
+        background: transparent;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: .5rem .5rem;
+        grid-template-areas: ".";
+        width: 100%;
+        height: 100%;
+    }
+    .advertisement-page-wrapper .item {
+        background: transparent;
+    }
+    .advertisement-page-wrapper .item-1 {
+        padding: 1rem;
+        background: url("../assets/icons/content-marketing.svg");
+        background-position: 250px 220px;
+        background-size: 120px;
+        background-repeat: no-repeat;
+    }
+    .advertisement-page-wrapper .item-1 h1 {
+        font-size: 3em;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+    }
+    .advertisement-page-wrapper .item-1 p {
+        width: 100%;
+        height: 60%;
+        font-size: 1.5em;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        white-space: wrap;
+        line-height: 2.5;
+        color: var(--text-color-shade);
+        background: transparent;
+        display: flex;
+        align-items: center;
+    }
+    .advertisement-page-wrapper .item-1 .button-container {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .explore-btn:hover {
+        background: var(--accent-color);
+        border: none;
+        color: var(--text-color);
+        box-shadow: 0px 5px 40px var(--accent-color-shadow);
+    }
+    .advertisement-page-wrapper .item-2 {
+        background: url("../assets/icons/content-marketing.svg");
+        background-position: 300px 200px;
+        background-size: 220px;
+        background-repeat: no-repeat;
+        display: none;
+    }
+}
+
+
+/*
+@media only screen and (min-width: 1200px) {
+    .nav-container {
+        width: 100%;
+        height: 10vh;
+        background: var(--secondary-color);
+        position: relative;
+        padding: .5rem .5rem;
+        z-index: 4;
+    }
+    .nav-wrapper {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        padding: .5rem .5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav-wrapper .logo-container {
+        background: transparent;
+        width: 5%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*Varsity Logo
+    svg {
+        width: 30px;
+        height: 30px;
+    }
+    .nav-wrapper .nav-link-wrapper {
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        height: 100%;
+    }
+    .nav-link-wrapper a {
+        color: var(--text-color);
+        font-size: 1.2em;
+        font-weight: 600;
+        text-decoration: none;
+        background: transparent;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-link-wrapper a:hover {
+        color: var(--accent-color);
+    }
+    .account-wrapper {
+        background: transparent;
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .login-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1.2em;
+    }
+    .login-btn img {
+        width: 1.7em;
+        height: 1.7em;
+    }
+    .cart-wrapper {
+        width: 40%;
+        height: 100%;
+        background: transparent;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 12px;
+    }
+    .cart-wrapper img {
+        width: 20px;
+        height: 20px;
+    }
+    .cart-wrapper span {
+        background: var(--accent-color);
+        color: var(--text-color);
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+    .menu-icon {
+        font-size: 2em;
+        display: none;
+    }
+    .phone-nav-wrapper {
+        display: none;
+    }
+    .container {
+        max-width: 100%;
+        height: 100vh;
+        background: transparent;
+    }
+    .landing-page-container {
+        height: 100vh;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 4rem 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 1rem 1rem;
+        grid-template-areas: ". .";
+    }
+    .landing-page-container>div {
+        background: url("../assets/img/landing_background.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 4rem;
         border-radius: 2rem;
     }
     .landing-page-container>div:nth-child(2) {
@@ -421,7 +949,7 @@ svg {
         height: 30%;
         background: transparent;
         text-align: center;
-        font-size: 5em;
+        font-size: 6em;
         font-weight: 700;
         display: flex;
         justify-content: center;
@@ -429,14 +957,14 @@ svg {
         letter-spacing: 3px;
     }
     .landing-page-container>div:nth-child(2) ul {
-        width: 80%;
+        width: 60%;
         background: transparent;
         height: 50%;
         list-style: none;
     }
     .landing-page-container>div:nth-child(2) li {
-        font-size: 1.2em;
-        line-height: 2;
+        font-size: 1.02rem;
+        line-height: 2.5;
         color: var(--text-color-shade);
     }
     .get-started-btn {
