@@ -13,13 +13,13 @@
     <link rel="stylesheet" href="./css/main.css">
     <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
     <title>Varsity Mart- Online shopping for universities in Tanzania.</title>
-    <link rel="icon" href="assets/icons/varsityMart_Icon.svg" type="image/svg+xml">
     <!-- Varsity icon on the title bar -->
+    <link rel="icon" href="assets/icons/varsityMart_Icon.svg" type="image/svg+xml">
 </head>
 
 <body>
 
-    <!-- Navigation bar and its components starts here -->
+    <!-- General navigation bar for the landing page -->
     <div class="nav-container">
         <div class="nav-wrapper">
             <div class="logo-container">
@@ -48,9 +48,9 @@
             </div>
         </div>
     </div>
-    <!-- End -->
+    <!-- navigation ends here -->
 
-    <!-- Landing Page-->
+    <!-- This is for navigation on mobile devices and equivalents -->
     <div class="add-phone-nav phone-nav-wrapper">
         <div class="phone-nav">
             <div class="phone-nav-header">
@@ -72,6 +72,9 @@
 
         </div>
     </div>
+    <!-- mobile navigation ends here -->
+
+    <!-- landing page starts here -->
     <div class="container landing-page-container" id="landing">
         <div class="item"></div>
         <div class="item">
@@ -84,7 +87,9 @@
             <button class="btn get-started-btn" onclick="location.href='get-started.html'">Start Shopping</button>
         </div>
     </div>
+    <!-- landing page ends here -->
 
+    <!-- discount section starts here -->
     <div class="discount-page-container" id="discounts">
         <div class="discount-page-wrapper">
             <div class="item">
@@ -98,7 +103,9 @@
             </div>
         </div>
     </div>
+    <!-- discount section ends here -->
 
+    <!-- advertisement section starts here -->
     <div class="advertisement-container" id="advertise">
         <div class="advertisement-page-wrapper">
             <div class="item item-1">
@@ -111,10 +118,97 @@
             <div class="item item-2"></div>
         </div>
     </div>
+    <!-- avertisemet section ends here -->
 
-    <div class="shop-with-varsity-container">
-
+    <!-- pricing section starts here -->
+    <div class="pricing-container" id="pricing">
+        <div class="pricing-page-wrapper">
+            <div class="pricing-header">
+                <h1>Price In Your Hands..</h1>
+            </div>
+            <div class="card card-1">
+                <div class="card-header">
+                    <h3>Starter</h3>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li class="enabled">Discount On First Use</li>
+                        <li class="disabled">More Exposure</li>
+                        <li class="disabled">Limitless Uploads</li>
+                    </ul>
+                </div>
+                <div class="card-actions">
+                    <button class="btn starter plan-btn">Select Plan</button>
+                </div>
+            </div>
+            <div class="card card-2">
+                <div class="card-header">
+                    <h3>Elegant</h3>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li class="enabled">Discount On First Use</li>
+                        <li class="enabled">More Exposure</li>
+                        <li class="disabled">Limitless Uploads</li>
+                    </ul>
+                </div>
+                <div class="card-actions">
+                    <button class="btn elegant plan-btn">Select Plan</button>
+                </div>
+            </div>
+            <div class="card card-3">
+                <div class="card-header">
+                    <h3>Premium</h3>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li class="enabled">Discount On First Use</li>
+                        <li class="enabled">More Exposure</li>
+                        <li class="enabled">Limitless Uploads</li>
+                    </ul>
+                </div>
+                <div class="card-actions">
+                    <button class="btn premium plan-btn">Select Plan</button>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- pricing section ends here -->
+
+    <!-- contact us section starts here -->
+    <div class="contact-us-container" id="contact-us">
+        <div class="contact-us-page-wrapper">
+            <div class="contact-us-header">
+                <h1>At Your Service..</h1>
+            </div>
+            <div class="item item-1">
+                <div class="contact-form-header">
+                    <h3>Contact Us</h3>
+                </div>
+                <div class="contact-form-body">
+                    <form>
+                        <label for="firstname">First Name</label><br>
+                        <input type="text" name="firstname" id="firstname" placeholder="Your first name..."><br>
+                        <label for="lastname">Last Name</label><br>
+                        <input type="text" name="lastname" id="lastname" placeholder="Your last name..."><br>
+                        <label for="country">Country/State</label><br>
+                        <select id="country" name="country">
+                            <option value="Tanzania">Tanzania</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Uganda">Uganda</option>
+                        </select><br>
+                        <label for="subject">Subject</label><br>
+                        <textarea name="subject" id="subject" placeholder="Write something...." style="height: 60px"></textarea>
+                    </form>
+                </div>
+                <div class="contact-form-footer">
+                    <button id="submit" class="btn submit-contact-btn">Submit</button>
+                </div>
+            </div>
+            <div class="item item-2"></div>
+        </div>
+    </div>
+    <!-- contact us section ends here -->
 </body>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
