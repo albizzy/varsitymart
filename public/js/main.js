@@ -25,3 +25,24 @@ window.addEventListener('click', e => {
         addLoginModal.classList.remove('login-modal-show')
     }
 })
+
+const showPassword = document.querySelector('#password');
+const toggleShow = document.querySelector('.bxs-show');
+const toggleHide = document.querySelector('.bxs-hide');
+
+toggleShow.addEventListener('click', () => {
+    if (showPassword.type === "password") {
+        showPassword.type = "text";
+    }
+    toggleShow.style.display = "none";
+    toggleHide.style.display = "block";
+})
+
+toggleHide.addEventListener('click', () => {
+    if (showPassword.type === "text") {
+        showPassword.type = "password";
+    }
+
+    toggleHide.style.display = "none";
+    toggleShow.style.display = "block";
+})
