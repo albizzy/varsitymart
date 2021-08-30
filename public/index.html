@@ -36,7 +36,7 @@
             </div>
 
             <div class="account-wrapper">
-                <button class="btn login-btn">Login</button>
+                <button class="btn login-btn open-login-modal">Login</button>
                 <div class="cart-wrapper">
                     <img src="assets/icons/bag.svg" alt="shopping-bag">
                     <span id="cart-counter">0</span>
@@ -73,6 +73,24 @@
         </div>
     </div>
     <!-- mobile navigation ends here -->
+
+    <!-- Login form modal starts here -->
+    <div class="add-login-modal login-modal-wrapper">
+        <div class="login-modal">
+            <div class="login-modal-header">
+                <h2>Login</h2>
+            </div>
+            <div class="login-modal-body">
+                <form class="login-modal-form">
+                    <input type="text" name="username" id="username" placeholder="Username"><br>
+                    <input type="password" name="password" id="password" placeholder="Password"><br>
+                    <input type="submit" value="Login" id="submit" class="btn">
+                </form>
+            </div>
+            <div class="login-modal-footer"></div>
+        </div>
+    </div>
+    <!-- login form modal ends here -->
 
     <!-- landing page starts here -->
     <div class="container landing-page-container" id="landing">
@@ -127,7 +145,7 @@
                 <h1>Price In Your Hands..</h1>
             </div>
             <div class="card card-1">
-                <div class="card-header">
+                <div class="card-header" style="background: #eae2b7">
                     <h3>Starter</h3>
                 </div>
                 <div class="card-body">
@@ -141,8 +159,8 @@
                     <button class="btn starter plan-btn">Select Plan</button>
                 </div>
             </div>
-            <div class="card card-2">
-                <div class="card-header">
+            <div class="card card-2" style="transform: scale(1.06);">
+                <div class="card-header" style="background: #fcbf49;">
                     <h3>Elegant</h3>
                 </div>
                 <div class="card-body">
@@ -157,7 +175,7 @@
                 </div>
             </div>
             <div class="card card-3">
-                <div class="card-header">
+                <div class="card-header" style="background: #d62828;">
                     <h3>Premium</h3>
                 </div>
                 <div class="card-body">
@@ -174,41 +192,6 @@
         </div>
     </div>
     <!-- pricing section ends here -->
-
-    <!-- contact us section starts here -->
-    <div class="contact-us-container" id="contact-us">
-        <div class="contact-us-page-wrapper">
-            <div class="contact-us-header">
-                <h1>At Your Service..</h1>
-            </div>
-            <div class="item item-1">
-                <div class="contact-form-header">
-                    <h3>Contact Us</h3>
-                </div>
-                <div class="contact-form-body">
-                    <form>
-                        <label for="firstname">First Name</label><br>
-                        <input type="text" name="firstname" id="firstname" placeholder="Your first name..."><br>
-                        <label for="lastname">Last Name</label><br>
-                        <input type="text" name="lastname" id="lastname" placeholder="Your last name..."><br>
-                        <label for="country">Country/State</label><br>
-                        <select id="country" name="country">
-                            <option value="Tanzania">Tanzania</option>
-                            <option value="Kenya">Kenya</option>
-                            <option value="Uganda">Uganda</option>
-                        </select><br>
-                        <label for="subject">Subject</label><br>
-                        <textarea name="subject" id="subject" placeholder="Write something...." style="height: 60px"></textarea>
-                    </form>
-                </div>
-                <div class="contact-form-footer">
-                    <button id="submit" class="btn submit-contact-btn">Submit</button>
-                </div>
-            </div>
-            <div class="item item-2"></div>
-        </div>
-    </div>
-    <!-- contact us section ends here -->
 </body>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->

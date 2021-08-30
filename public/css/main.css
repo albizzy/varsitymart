@@ -160,7 +160,7 @@ svg {
     background: transparent;
     font-size: 1rem;
     outline: none;
-    transition: all .5s ease;
+    transition: all .3s ease;
 }
 
 .login-btn {
@@ -209,6 +209,88 @@ svg {
 
 .phone-nav-wrapper {
     display: none;
+}
+
+.login-modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(34, 34, 34, 0.171);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    display: none;
+    animation: fadeTop .3s ease;
+}
+
+@keyframes fadeTop {
+    from {
+        opacity: 0;
+        top: 300px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+.login-modal {
+    width: 500px;
+    height: 500px;
+    background: var(--secondary-color);
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.login-modal-show {
+    display: flex;
+}
+
+.login-modal-header {
+    width: 100%;
+    height: 10%;
+    background: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-modal-body {
+    width: 100%;
+    height: 70%;
+    background: transparent;
+    padding: 1rem;
+}
+
+.login-modal-form {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #111111;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+}
+
+.login-modal-form input {
+    width: 80%;
+    height: 3rem;
+    padding: .5rem .5rem;
+    border-radius: .5rem;
+    border: 1px solid var(--text-color);
+}
+
+.login-modal-form input[type="submit"] {
+    width: 9rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    background: var(--accent-color);
+    border: none;
 }
 
 .container {
@@ -498,7 +580,7 @@ svg {
     background: var(--primary-color);
     border-radius: 0 0 1.5rem 1.5rem;
     box-shadow: 0 8px 40px rgba(179, 179, 179, 0.438);
-    height: 400px;
+    height: 350px;
 }
 
 .pricing-page-wrapper .card .card-header {
@@ -568,105 +650,6 @@ svg {
 }
 
 
-/* styles for contact-us page */
-
-.contact-us-container {
-    position: relative;
-    max-width: 100%;
-    height: 100vh;
-    background: transparent;
-    top: 90vh;
-    padding: 4rem;
-}
-
-.contact-us-page-wrapper {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.4fr 1.6fr;
-    gap: 2rem 2rem;
-    grid-template-areas: "contact-us-header contact-us-header" ". .";
-    padding: 2rem;
-}
-
-.contact-us-header {
-    grid-area: contact-us-header;
-    background: transparent;
-    display: flex;
-    align-items: center;
-}
-
-.contact-us-header h1 {
-    font-size: 6em;
-}
-
-.contact-us-page-wrapper .item {
-    background: transparent;
-    height: 420px;
-}
-
-.contact-us-page-wrapper .item .contact-form-header {
-    width: 100%;
-    height: 20%;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-}
-
-.contact-us-page-wrapper .item .contact-form-header h3 {
-    font-size: 3em;
-}
-
-.contact-us-page-wrapper .item-2 {
-    background: url("../assets/img/contact-us.jpg") no-repeat center;
-    background-size: cover;
-}
-
-.contact-form-body {
-    padding: 0 1rem 0 1rem;
-    width: 100%;
-    height: 60%;
-}
-
-.contact-form-body form {
-    width: 80%;
-    background: transparent;
-}
-
-.contact-form-body form label {
-    font-size: 1.2em;
-}
-
-.contact-form-body form input[type=text],
-select,
-textarea {
-    width: 100%;
-    padding: .4rem;
-    margin-top: .3rem;
-    margin-bottom: .6rem;
-    background: transparent;
-    border: 1px solid var(--text-color-shade);
-    border-radius: .2rem;
-}
-
-.contact-form-footer {
-    width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 1rem;
-}
-
-.submit-contact-btn {
-    background: var(--accent-color);
-    border: none;
-    color: var(--text-color);
-}
-
-
 /*Media queries for phone*/
 
 @media only screen and (max-width: 600px) {
@@ -723,7 +706,7 @@ textarea {
         background: transparent;
         font-size: .8rem;
         outline: none;
-        transition: all .5s ease;
+        transition: all .3s ease;
     }
     .menu-icon {
         display: block;
